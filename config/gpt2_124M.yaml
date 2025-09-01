@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+
+vocab_size: 50257        # Vocabulary size
+context_length: 1024     # Context length
+emb_dim: 768             # Embedding dimension
+n_heads: 12              # Number of attention heads
+n_layers: 12             # Number of layers
+
+# Dropout rates
+drop_rate_emb: 0.1       # dropout for embedding layers
+drop_rate_attn: 0.1      # dropout for multi-head attention
+drop_rate_shortcut: 0.1  # dropout for shortcut connections
+
+# Attention settings
+qkv_bias: false          # Query-Key-Value bias
+

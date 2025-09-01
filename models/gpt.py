@@ -2,8 +2,8 @@
 
 import torch
 import torch.nn as nn
-from TransformerBlock import TransformerBlock
-from LayerNorm import LayerNorm
+from .block import TransformerBlock
+from .layernorm import LayerNorm
 
 class GPTModel(nn.Module):
     def __init__(self, cfg):

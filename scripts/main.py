@@ -1,23 +1,15 @@
 # -*- coding: utf-8 -*-
 
+import yaml
 import tiktoken
 import torch
 import torch.nn as nn
-from GPT import GPTModel
-from generate_text_simple import generate_text_simple
+from models import GPTModel
+from scripts import generate_text_simple
 
 def main():
-    GPT_CONFIG_124M = {
-        "vocab_size": 50257,     # Vocabulary size
-        "context_length": 1024,  # Context length
-        "emb_dim": 768,          # Embedding dimension
-        "n_heads": 12,           # Number of attention heads
-        "n_layers": 12,          # Number of layers
-        "drop_rate_emb": 0.1,        # NEW: dropout for embedding layers
-        "drop_rate_attn": 0.1,       # NEW: dropout for multi-head attention
-        "drop_rate_shortcut": 0.1,   # NEW: dropout for shortcut connections
-        "qkv_bias": False        # Query-Key-Value bias
-    }
+    with open("config/gpt2_124M.yaml", "r") as f:
+        GPT_CONFIG_124M = yaml.safe_load(f)
 
     torch.manual_seed(123)
     model = GPTModel(GPT_CONFIG_124M)
