@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+# SPDX-License-Identifier: Apache-2.0
+# Copyright (c) 2025 Howard Liao
+
 from .gpt import GPTModel
 from .attention import MultiHeadAttention
 from .feedforward import FeedForward
