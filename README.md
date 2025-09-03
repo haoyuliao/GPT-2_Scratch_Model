@@ -8,4 +8,4 @@ This repo provides a GPT-2–like model, training loop, and utilities for experi
 ## Attribution
 Portions of this project are adapted from **LLMs-from-scratch** by Sebastian Raschka
 (https://github.com/rasbt/LLMs-from-scratch), licensed under Apache-2.0.
-See [LICENSE](LICENSE) and [MODIFICATIONS.md](MODIFICATIONS.md) for details.
+See [LICENSE](LICENSE) for details.
